@@ -3,12 +3,14 @@ import SearchBar from "@/components/SearchBar";
 import { getAllLibraryItems, Experience, Education, Project, BlogPost } from "@/data/profileData";
 import { Briefcase, GraduationCap, FolderKanban, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { DetailItem } from "@/components/DetailPanel";
 
 interface SearchSectionProps {
   onNavigate: (section: string) => void;
+  onSelectItem: (item: DetailItem) => void;
 }
 
-const SearchSection = ({ onNavigate }: SearchSectionProps) => {
+const SearchSection = ({ onNavigate, onSelectItem }: SearchSectionProps) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const allItems = getAllLibraryItems();
@@ -134,7 +136,7 @@ const SearchSection = ({ onNavigate }: SearchSectionProps) => {
                 return (
                   <button
                     key={item.data.id}
-                    onClick={() => onNavigate(item.type === "project" ? "projects" : item.type)}
+                    onClick={() => onSelectItem({ type: item.type, data: item.data })}
                     className="w-full flex items-center gap-4 p-3 rounded-md hover:bg-secondary transition-colors text-left"
                   >
                     <img

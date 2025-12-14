@@ -1,8 +1,13 @@
 import { experiences } from "@/data/profileData";
 import { Clock, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { DetailItem } from "@/components/DetailPanel";
 
-const ExperienceSection = () => {
+interface ExperienceSectionProps {
+  onSelectItem: (item: DetailItem) => void;
+}
+
+const ExperienceSection = ({ onSelectItem }: ExperienceSectionProps) => {
   return (
     <div className="animate-fade-in">
       {/* Header */}
@@ -38,9 +43,10 @@ const ExperienceSection = () => {
         </div>
 
         {experiences.map((exp, index) => (
-          <div
+          <button
             key={exp.id}
-            className="group grid grid-cols-[auto_1fr_1fr_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up"
+            onClick={() => onSelectItem({ type: 'experience', data: exp })}
+            className="group w-full grid grid-cols-[auto_1fr_1fr_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up text-left"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <span className="w-6 text-muted-foreground group-hover:hidden">{index + 1}</span>
@@ -68,7 +74,7 @@ const ExperienceSection = () => {
             </div>
 
             <span className="text-muted-foreground text-sm">{exp.duration}</span>
-          </div>
+          </button>
         ))}
       </div>
     </div>
