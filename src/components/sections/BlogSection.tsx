@@ -1,7 +1,12 @@
 import { blogPosts } from "@/data/profileData";
-import { Clock, Play, ExternalLink } from "lucide-react";
+import { Clock, Play } from "lucide-react";
+import { DetailItem } from "@/components/DetailPanel";
 
-const BlogSection = () => {
+interface BlogSectionProps {
+  onSelectItem: (item: DetailItem) => void;
+}
+
+const BlogSection = ({ onSelectItem }: BlogSectionProps) => {
   return (
     <div className="animate-fade-in">
       {/* Header */}
@@ -27,22 +32,19 @@ const BlogSection = () => {
 
       {/* Blog list */}
       <div className="px-8 py-6">
-        <div className="grid grid-cols-[auto_1fr_auto_auto] gap-4 px-4 py-2 text-sm text-muted-foreground border-b border-border mb-2">
+        <div className="grid grid-cols-[auto_1fr_auto] gap-4 px-4 py-2 text-sm text-muted-foreground border-b border-border mb-2">
           <span>#</span>
           <span>Title</span>
           <span className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
           </span>
-          <span></span>
         </div>
 
         {blogPosts.map((blog, index) => (
-          <a
+          <button
             key={blog.id}
-            href={blog.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group grid grid-cols-[auto_1fr_auto_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up"
+            onClick={() => onSelectItem({ type: 'blog', data: blog })}
+            className="group w-full grid grid-cols-[auto_1fr_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up text-left"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <span className="w-6 text-muted-foreground group-hover:hidden">{index + 1}</span>
@@ -66,9 +68,7 @@ const BlogSection = () => {
               <span>{blog.date}</span>
               <span>{blog.readTime}</span>
             </div>
-
-            <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-          </a>
+          </button>
         ))}
       </div>
     </div>

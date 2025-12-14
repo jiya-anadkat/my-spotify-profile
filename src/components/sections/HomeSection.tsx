@@ -1,12 +1,14 @@
 import ProfileHeader from "@/components/ProfileHeader";
 import ContentCard from "@/components/ContentCard";
 import { experiences, projects, blogPosts } from "@/data/profileData";
+import { DetailItem } from "@/components/DetailPanel";
 
 interface HomeSectionProps {
   onNavigate: (section: string) => void;
+  onSelectItem: (item: DetailItem) => void;
 }
 
-const HomeSection = ({ onNavigate }: HomeSectionProps) => {
+const HomeSection = ({ onNavigate, onSelectItem }: HomeSectionProps) => {
   return (
     <div className="animate-fade-in">
       <ProfileHeader />
@@ -32,6 +34,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
                 image={exp.image}
                 title={exp.role}
                 subtitle={exp.company}
+                onClick={() => onSelectItem({ type: 'experience', data: exp })}
               />
             ))}
           </div>
@@ -57,6 +60,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
                 image={project.image}
                 title={project.title}
                 subtitle={project.technologies.join(" · ")}
+                onClick={() => onSelectItem({ type: 'project', data: project })}
               />
             ))}
           </div>
@@ -82,6 +86,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
                 image={blog.image}
                 title={blog.title}
                 subtitle={`${blog.date} · ${blog.readTime}`}
+                onClick={() => onSelectItem({ type: 'blog', data: blog })}
               />
             ))}
           </div>

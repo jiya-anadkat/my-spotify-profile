@@ -1,7 +1,12 @@
 import { education } from "@/data/profileData";
 import { Clock, Play } from "lucide-react";
+import { DetailItem } from "@/components/DetailPanel";
 
-const EducationSection = () => {
+interface EducationSectionProps {
+  onSelectItem: (item: DetailItem) => void;
+}
+
+const EducationSection = ({ onSelectItem }: EducationSectionProps) => {
   return (
     <div className="animate-fade-in">
       {/* Header */}
@@ -37,9 +42,10 @@ const EducationSection = () => {
         </div>
 
         {education.map((edu, index) => (
-          <div
+          <button
             key={edu.id}
-            className="group grid grid-cols-[auto_1fr_1fr_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up"
+            onClick={() => onSelectItem({ type: 'education', data: edu })}
+            className="group w-full grid grid-cols-[auto_1fr_1fr_auto] gap-4 px-4 py-3 rounded-md hover:bg-secondary transition-colors items-center animate-slide-up text-left"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <span className="w-6 text-muted-foreground group-hover:hidden">{index + 1}</span>
@@ -60,7 +66,7 @@ const EducationSection = () => {
             <span className="text-muted-foreground">{edu.institution}</span>
 
             <span className="text-muted-foreground text-sm">{edu.duration}</span>
-          </div>
+          </button>
         ))}
       </div>
     </div>

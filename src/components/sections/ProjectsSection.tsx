@@ -1,8 +1,12 @@
 import { projects } from "@/data/profileData";
 import ContentCard from "@/components/ContentCard";
-import { ExternalLink } from "lucide-react";
+import { DetailItem } from "@/components/DetailPanel";
 
-const ProjectsSection = () => {
+interface ProjectsSectionProps {
+  onSelectItem: (item: DetailItem) => void;
+}
+
+const ProjectsSection = ({ onSelectItem }: ProjectsSectionProps) => {
   return (
     <div className="animate-fade-in">
       {/* Header */}
@@ -39,18 +43,8 @@ const ProjectsSection = () => {
                 image={project.image}
                 title={project.title}
                 subtitle={project.technologies.join(" · ")}
+                onClick={() => onSelectItem({ type: 'project', data: project })}
               />
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 mt-2 px-4 text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  View Project
-                </a>
-              )}
             </div>
           ))}
         </div>
