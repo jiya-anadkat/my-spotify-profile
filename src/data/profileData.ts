@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     id: "blog-2",
     title: "Product Management Post-SaaSpocalypse",
     excerpt: "Reflections on the changing landscape of product management in the post-SaaS era.",
-    date: "Nov 2024",
+    date: "March 2026",
     readTime: "3 min read",
     link: "https://medium.com/@jiyaanadkat/product-management-post-saaspocalypse-6ec32a329e26",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=300&fit=crop",
