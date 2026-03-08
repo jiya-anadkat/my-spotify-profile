@@ -38,12 +38,12 @@ export interface BlogPost {
 
 export const profile = {
   name: "jiya anadkat",
-  title: "uwaterloo math/business | product @ arteria ai",
+  title: "uwaterloo math & business | product @ arteria ai",
   bio: "building",
   location: "toronto | van | sf",
   email: "jiya.anadkat@uwaterloo.ca",
   linkedin: "linkedin.com/in/jiya-anadkat",
-  avatar: "/avatar.jpg",
+  avatar: "/avatar.JPG",
 };
 
 export const experiences: Experience[] = [
@@ -51,18 +51,18 @@ export const experiences: Experience[] = [
     id: "exp-1",
     company: "Arteria AI",
     role: "Product Owner Co-op",
-    duration: "Sept. 2025 - Present",
-    description: "Leading product strategy for B2B SaaS platform serving 500+ enterprise clients. Drove 40% increase in user engagement through data-driven feature prioritization.",
-    skills: ["Product Strategy", "Roadmapping", "A/B Testing", "SQL"],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=300&fit=crop",
+    duration: "September 2025 - April 2026",
+    description: "Drove E2E delivery of core features and API specs to enhance user experience of a B2B SaaS AI-powered platform.",
+    skills: ["Jira", "Roadmapping", "API Design", "SDLC", "Scrum", "Figma"],
+    image: "/office.jpg",
   },
   {
     id: "exp-2",
     company: "UWPM Club",
     role: "VP of Content",
     duration: "Sept. 2025 - Dec. 2025",
-    description: "Launched 3 major product features from ideation to market. Collaborated with engineering and design teams to reduce time-to-market by 30%.",
-    skills: ["Agile", "User Research", "Jira", "Analytics"],
+    description: "Led a content team in delivering a weekly product newsletter and developed a case study for 100+ students to cultivate product thinking and discovery skills.",
+    skills: ["Product Discovery", "Market Research", "Content Creation"],
     image: "/uwpm.jpg",
   },
   {
@@ -70,8 +70,17 @@ export const experiences: Experience[] = [
     company: "Mondex Corp.",
     role: "Product Management Intern",
     duration: "Jan. 2025 - Apr. 2025",
-    description: "Managed product lifecycle for client-facing web applications. Conducted user interviews and usability testing to inform product decisions.",
-    skills: ["Wireframing", "Figma", "Sprint Planning", "Stakeholder Management"],
+    description: "Improved project delivery and decision-making by implementing Scrum and conducting UX testing for an internal application.",
+    skills: ["User Testing", "ClickUp", "Sprint Planning", "Information Architecture"],
+    image: "/mond.jpg",
+  },
+  {
+    id: "exp-4",
+    company: "Playlist",
+    role: "Product Manager",
+    duration: "2024 - Present",
+    description: "Built and shipped Playlist, a music curation product that connects listeners with personalized playlists. Led discovery, roadmap, and cross-functional delivery.",
+    skills: ["Product Strategy", "User Research", "Figma", "Growth"],
     image: "/mond.jpg",
   },
   {
