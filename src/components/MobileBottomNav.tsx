@@ -19,13 +19,13 @@ const MobileBottomNav = ({ activeSection, onSectionChange }: MobileBottomNavProp
         {tabs.map((tab) => {
           const isActive =
             tab.id === "library"
-              ? ["experience", "education", "projects", "blog"].includes(activeSection)
+              ? ["library", "experience", "education", "projects", "blog"].includes(activeSection)
               : activeSection === tab.id;
 
           return (
             <button
               key={tab.id}
-              onClick={() => onSectionChange(tab.id === "library" ? "experience" : tab.id)}
+              onClick={() => onSectionChange(tab.id)}
               className={cn(
                 "flex flex-col items-center gap-0.5 py-1 px-4 transition-colors",
                 isActive ? "text-foreground" : "text-muted-foreground"
