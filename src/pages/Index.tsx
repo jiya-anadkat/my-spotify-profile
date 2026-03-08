@@ -16,8 +16,14 @@ import DetailPanel, { DetailItem } from "@/components/DetailPanel";
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [selectedItem, setSelectedItem] = useState<DetailItem | null>(null);
+  const isMobile = useIsMobile();
 
   const renderSection = () => {
+    // On mobile, "library" shows the mobile library view
+    if (activeSection === "library" && isMobile) {
+      return <MobileLibrarySection onSelectItem={setSelectedItem} />;
+    }
+
     switch (activeSection) {
       case "home":
         return <HomeSection onNavigate={setActiveSection} onSelectItem={setSelectedItem} />;
@@ -31,6 +37,8 @@ const Index = () => {
         return <ProjectsSection onSelectItem={setSelectedItem} />;
       case "blog":
         return <BlogSection onSelectItem={setSelectedItem} />;
+      case "library":
+        return <ExperienceSection onSelectItem={setSelectedItem} />;
       default:
         return <HomeSection onNavigate={setActiveSection} onSelectItem={setSelectedItem} />;
     }
