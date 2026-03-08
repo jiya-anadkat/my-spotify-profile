@@ -20,7 +20,7 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
   ];
 
   return (
-    <aside className="w-64 min-h-screen bg-spotify-black p-2 flex flex-col gap-2">
+    <aside className="hidden md:flex w-64 min-h-screen bg-spotify-black p-2 flex-col gap-2">
       {/* Main Navigation */}
       <nav className="bg-card rounded-lg p-4">
         <ul className="space-y-2">
