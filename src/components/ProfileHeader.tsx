@@ -1,8 +1,11 @@
 import { profile } from "@/data/profileData";
-import { MapPin, Mail, Linkedin, Play } from "lucide-react";
+import { MapPin, Mail, Linkedin, Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAudio } from "@/contexts/AudioContext";
 
 const ProfileHeader = () => {
+  const { isPlaying, togglePlay } = useAudio();
+
   return (
     <div
       className="relative px-8 pt-16 pb-8"
@@ -52,9 +55,14 @@ const ProfileHeader = () => {
       <div className="mt-8 flex items-center gap-6">
         <Button
           size="lg"
-          className="rounded-full w-14 h-14 bg-primary hover:bg-primary/90 hover:scale-105 transition-all shadow-lg animate-pulse-glow"
+          onClick={togglePlay}
+          className="rounded-full w-14 h-14 bg-primary hover:bg-primary/90 hover:scale-105 transition-all shadow-lg"
         >
-          <Play className="w-6 h-6 fill-current ml-1" />
+          {isPlaying ? (
+            <Pause className="w-6 h-6 fill-current" />
+          ) : (
+            <Play className="w-6 h-6 fill-current ml-1" />
+          )}
         </Button>
         <span className="text-muted-foreground text-sm">{profile.title}</span>
       </div>
