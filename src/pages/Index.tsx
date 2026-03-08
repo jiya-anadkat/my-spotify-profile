@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import Sidebar from "@/components/Sidebar";
 import NowPlaying from "@/components/NowPlaying";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import MobileDetailView from "@/components/MobileDetailView";
+import MobileLibrarySection from "@/components/sections/MobileLibrarySection";
 import HomeSection from "@/components/sections/HomeSection";
 import SearchSection from "@/components/sections/SearchSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
