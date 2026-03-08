@@ -28,7 +28,7 @@ const HomeSection = ({ onNavigate, onSelectItem }: HomeSectionProps) => {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {experiences.slice(0, 3).map((exp) => (
+            {experiences.slice(0, 5).map((exp) => (
               <ContentCard
                 key={exp.id}
                 image={exp.image}
@@ -54,7 +54,7 @@ const HomeSection = ({ onNavigate, onSelectItem }: HomeSectionProps) => {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {projects.slice(0, 3).map((project) => (
+            {projects.slice(0, 5).map((project) => (
               <ContentCard
                 key={project.id}
                 image={project.image}
@@ -80,7 +80,7 @@ const HomeSection = ({ onNavigate, onSelectItem }: HomeSectionProps) => {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {blogPosts.slice(0, 4).map((blog) => (
+            {blogPosts.slice(0, 2).map((blog) => (
               <ContentCard
                 key={blog.id}
                 image={blog.image}

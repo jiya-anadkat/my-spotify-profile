@@ -74,24 +74,34 @@ export const experiences: Experience[] = [
     skills: ["Wireframing", "Figma", "Sprint Planning", "Stakeholder Management"],
     image: "/mond.jpg",
   },
+  {
+    id: "exp-4",
+    company: "Shopify",
+    role: "Product Analyst Intern",
+    duration: "May 2024 - Aug. 2024",
+    description: "Analyzed merchant behavior data to identify growth opportunities. Built dashboards and presented insights to senior leadership, influencing Q4 product roadmap.",
+    skills: ["Data Analysis", "Looker", "Python", "Experimentation"],
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&h=300&fit=crop",
+  },
+  {
+    id: "exp-5",
+    company: "RBC",
+    role: "Business Analyst Co-op",
+    duration: "Jan. 2024 - Apr. 2024",
+    description: "Supported digital transformation initiatives across retail banking. Gathered requirements from stakeholders and translated them into actionable user stories.",
+    skills: ["Requirements Gathering", "Confluence", "Process Mapping", "UAT"],
+    image: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=300&h=300&fit=crop",
+  },
 ];
 
 export const education: Education[] = [
   {
     id: "edu-1",
-    institution: "Stanford University",
-    degree: "MBA, Technology Management",
-    duration: "2015 - 2017",
-    description: "Focused on product management and entrepreneurship. Led a team project that won the Stanford Entrepreneurship Challenge.",
+    institution: "University of Waterloo",
+    degree: "BMA, Mathematics & Business Administration",
+    duration: "2023 - 2028",
+    description: "Double degree program combining quantitative skills with business acumen. Active in product management and entrepreneurship clubs.",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?w=300&h=300&fit=crop",
-  },
-  {
-    id: "edu-2",
-    institution: "UC Berkeley",
-    degree: "B.S. Computer Science",
-    duration: "2011 - 2015",
-    description: "Strong foundation in software engineering and human-computer interaction. Graduated with honors.",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=300&h=300&fit=crop",
   },
 ];
 
@@ -119,13 +129,28 @@ export const projects: Project[] = [
     technologies: ["Node.js", "PostgreSQL", "Slack API"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop",
   },
+  {
+    id: "proj-4",
+    title: "Event Discovery Platform",
+    description: "Created a campus event aggregator that pulls from multiple sources and recommends events based on user interests.",
+    technologies: ["Next.js", "Supabase", "Tailwind CSS"],
+    link: "https://github.com",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=300&fit=crop",
+  },
+  {
+    id: "proj-5",
+    title: "Personal Portfolio (This Site)",
+    description: "Spotify-inspired personal portfolio built with React and Tailwind, featuring an integrated audio player.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=300&h=300&fit=crop",
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
   {
     id: "blog-1",
     title: "4 Lessons from My First 4 Months in Product.",
-    excerpt: "There is a massive difference between reading about Product Management through case studies and Marty Cagan’s books and actually sitting in on a sprint planning meeting.",
+    excerpt: "There is a massive difference between reading about Product Management through case studies and Marty Cagan's books and actually sitting in on a sprint planning meeting.",
     date: "Dec 2025",
     readTime: "3 min read",
     link: "https://medium.com/@jiyaanadkat/4-lessons-from-my-first-4-months-in-product-d755192edbbd",
@@ -139,24 +164,6 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     link: "https://medium.com",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=300&fit=crop",
-  },
-  {
-    id: "blog-3",
-    title: "Building Products Users Love",
-    excerpt: "How to conduct effective user research and translate insights into features.",
-    date: "Oct 2024",
-    readTime: "10 min read",
-    link: "https://medium.com",
-    image: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=300&h=300&fit=crop",
-  },
-  {
-    id: "blog-4",
-    title: "Metrics That Matter for PMs",
-    excerpt: "Understanding the key metrics every product manager should track and optimize.",
-    date: "Sep 2024",
-    readTime: "7 min read",
-    link: "https://medium.com",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=300&fit=crop",
   },
 ];
 
