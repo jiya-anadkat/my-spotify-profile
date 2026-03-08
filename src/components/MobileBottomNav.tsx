@@ -19,7 +19,7 @@ const MobileBottomNav = ({ activeSection, onSectionChange }: MobileBottomNavProp
         {tabs.map((tab) => {
           const isActive =
             tab.id === "library"
-              ? ["experience", "education", "projects", "blog"].includes(activeSection)
+              ? ["library", "experience", "education", "projects", "blog"].includes(activeSection)
               : activeSection === tab.id;
 
           return (
