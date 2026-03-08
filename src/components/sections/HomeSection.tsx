@@ -28,7 +28,7 @@ const HomeSection = ({ onNavigate, onSelectItem }: HomeSectionProps) => {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {experiences.slice(0, 3).map((exp) => (
+            {experiences.slice(0, 5).map((exp) => (
               <ContentCard
                 key={exp.id}
                 image={exp.image}
