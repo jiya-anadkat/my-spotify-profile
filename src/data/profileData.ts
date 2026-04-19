@@ -100,7 +100,7 @@ export const education: Education[] = [
     institution: "University of Waterloo",
     degree: "Bachelor of Mathematics in Mathematics/Business Administration",
     duration: "2023 - 2028",
-    description: "roduct Management Club Executive, Quantify Case Comp., Cheese Club Executive, Women in Math",
+    description: "Product Management Club Executive, Quantify Case Comp., Cheese Club Executive, Women in Math",
     image: "/waterloo.jpg",
   },
 ];
